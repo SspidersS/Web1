@@ -11,29 +11,23 @@ public class JsonPlaceholderClient {
 
     public static void main(String[] args) {
         try {
-            // Test fetching all users
             String allUsers = getAllUsers();
             System.out.println("All Users:\n" + allUsers);
 
-            // Test fetching a user by ID
             String userById = getUserById(1);
             System.out.println("\nUser by ID:\n" + userById);
 
-            // Test fetching a user by username
             String userByUsername = getUserByUsername("Bret");
             System.out.println("\nUser by Username:\n" + userByUsername);
 
-            // Test creating a new user
             String newUserJson = "{\"name\":\"John Doe\",\"username\":\"johndoe\",\"email\":\"john.doe@example.com\"}";
             String createdUser = createUser(newUserJson);
             System.out.println("\nCreated User:\n" + createdUser);
 
-            // Test updating an existing user
             String updatedUserJson = "{\"name\":\"John Doe\",\"username\":\"johndoe\",\"email\":\"john.doe@updated.com\"}";
             int updateStatus = updateUser(1, updatedUserJson);
             System.out.println("\nUpdate Status: " + updateStatus);
 
-            // Test deleting a user
             int deleteStatus = deleteUser(1);
             System.out.println("\nDelete Status: " + deleteStatus);
 
